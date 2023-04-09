@@ -1,7 +1,7 @@
 <?php
 require("config.php");         //definujeme zakladne globalne premenne a cesty
 require("kint.phar");          //debugging
-print_r($_SERVER['SERVER_NAME']);
+
 //Kint::dump($GLOBALS, $_SERVER, "Hello World");
 $action = isset($_GET['action']) ? $_GET['action'] : ""; //ak nenajde ziadnu akciu= za lomitkom definovanu rutu, tak zadame ze je action=empty a nasledujuci switch odkaze na homepage.php
 

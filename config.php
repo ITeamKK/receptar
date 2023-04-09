@@ -7,13 +7,23 @@ include("globals.php"); //defined global variables
 ini_set( "display_errors", true ); //line causes error messages to be displayed in the browser,it should be set to false on a live site since it can be a security risk.
 date_default_timezone_set( "Europe/Madrid" );  //we need to tell PHP our server’s timezone (otherwise PHP generates a warning message) http://www.php.net/manual/en/timezones.php
 
-//DB ACCESS
+// config db according to server
+if(strpos($_SERVER['SERVER_NAME'], '000webhostapp')){
+  //DB ACCESS
 define( "DB_DSN", "mysql:host=localhost;dbname=id20548436_cms;charset=utf8mb4"); //where to find our MySQL database + Username and Password in next 2 rows
 
 //TEST SLOVAK ACCES TO DB
 define( "DB_DS_SLOVAK", "mysql:host=localhost;dbname=id20548436_cms;charset=utf8mb4");
 //charset is necessary to set to UTF8mb4 for slovak characters?
 
+}else{
+//DB ACCESS
+define( "DB_DSN", "mysql:host=db_server;dbname=id20548436_cms;charset=utf8mb4"); //where to find our MySQL database + Username and Password in next 2 rows
+
+//TEST SLOVAK ACCES TO DB
+define( "DB_DS_SLOVAK", "mysql:host=db_server;dbname=id20548436_cms;charset=utf8mb4");
+//charset is necessary to set to UTF8mb4 for slovak characters?
+}
 
 define( "DB_USERNAME", "id20548436_root" );
 define( "DB_PASSWORD", "qc0[Pa|mT7m01)hG" );
@@ -53,9 +63,9 @@ function handleException( $exception ) { //simple function to handle any PHP exc
 
 set_exception_handler( 'handleException' ); //calling the function when exception handling is needed
 //DISPLAY ERRORS https://www.php.net/manual/en/ini.list.php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-//  error_reporting(E_ALL);
+ ini_set('display_errors', 1);
+ ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
 
 //ADDITIONAL
 define("TODAY",date('F j, Y'));
