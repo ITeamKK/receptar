@@ -8,10 +8,10 @@ ini_set( "display_errors", true ); //line causes error messages to be displayed 
 date_default_timezone_set( "Europe/Madrid" );  //we need to tell PHP our server’s timezone (otherwise PHP generates a warning message) http://www.php.net/manual/en/timezones.php
 
 //DB ACCESS
-define( "DB_DSN", "mysql:host=db_server;dbname=id20548436_cms;charset=utf8mb4"); //where to find our MySQL database + Username and Password in next 2 rows
+define( "DB_DSN", "mysql:host=1;dbname=id20548436_cms;charset=utf8mb4"); //where to find our MySQL database + Username and Password in next 2 rows
 
 //TEST SLOVAK ACCES TO DB
-define( "DB_DS_SLOVAK", "mysql:host=db_server;dbname=id20548436_cms;charset=utf8mb4");
+define( "DB_DS_SLOVAK", "mysql:host=1;dbname=id20548436_cms;charset=utf8mb4");
 //charset is necessary to set to UTF8mb4 for slovak characters?
 
 
