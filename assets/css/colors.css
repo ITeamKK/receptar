@@ -1,0 +1,10 @@
+:root {
+  --light: #fb7f50;
+  --dark: #484841;
+  --complement: #22FCC1;
+  --card-color: #622837;
+  --danger-color: rgb(158, 12, 12);
+  --tooltip-color: #32322a;
+  --article-color: rgb(128 60 178 / 32%);
+
+}
