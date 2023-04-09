@@ -2,19 +2,17 @@
 
 <footer class="">
   <div class="d-flex justify-content-center">
+  <?php /*/ ?>
     <p class="footerElement"><a href="./?action=policy">Podmienky ochrany osobných údajov</a></p>
 
     <p class="separator"> | </p>
+<?php /*/ ?>
 
-    <p class="footerElement"><a href="./?action=aboutUs">O nás</a></p>
-
-    <p class="separator"> | </p>
-
-    <p class="footerElement"><a href="./?action=contactForm">Kontaktný formulár</a></p>
+    <p class="footerElement"><a href="./?action=contactForm">Kontakt</a></p>
 
     <p class="separator"> | </p>
 
-    <p class="footerElement">teamKK &copy; 2014 - <?=  date("Y"); ?></p>
+    <p class="footerElement"><a href="./?action=aboutUs">teamKK &copy; 2014 - <?=  date("Y"); ?></a></p>
   </div>
 
   <!--certbot spanielsky -->

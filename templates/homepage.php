@@ -10,7 +10,6 @@
 // d($USERNAME,$USERNAME2,$usernameFormEntry);
 ?>
 
-<p><a href="./?action=archive">Zobraziť všetky recepty (<?= $results['totalRows'] ?>)</a></p>
 <section class="card-container mt-3">
   <?php foreach ($results['categories'] as $category) {
     //d($results['categories']);

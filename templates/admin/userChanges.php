@@ -8,7 +8,7 @@
 
 
 <?php //ORANGE SECTION?>
-<div class="userData neomorf_2_outer p-4">
+<div class="userData p-4">
   <p>Počet mojich receptov : <?=  $countArticlesUser ?></p>
   <p>Registrovaný od : <?=  date('j F Y', $registeredFrom) ?></p>
 </div>
@@ -16,7 +16,7 @@
 <?php //ABOUT USER SECTION?>
 <div class="containerAccount d-flex">
 
-  <div class="neomorf_1_outer d-flex flex-column justify-content-center align-items-center">
+  <div class=" d-flex flex-column justify-content-center align-items-center">
     <h3>Moja fotografia a niečo o mne</h3>
 
     <?php //TEXTAREA ABOUT ME ?>
@@ -39,10 +39,10 @@
       <?php } ?>
       <?php //DELETE IMG
       ?>
-      <button class="btn neomorf_2_inner p-3 m-3" type="submit" name="deleteImage" form="updateUserForm">Vymazať obrázok
+      <button class="btn  p-3 m-3" type="submit" name="deleteImage" form="updateUserForm">Vymazať obrázok
       </button>
 
-      <div class="btn neomorf_2_inner p-3 m-3">
+      <div class="btn  p-3 m-3">
         <label class="" for="userImage">Nahrať fotku</label>
         <input class="" type="file" name="userImage" id="userImage" form="updateUserForm" />
       </div>
@@ -51,14 +51,14 @@
     <div class="p-5">
       <?php //toto odosle do adminu v $_POST iny submit ako pri zmene mena a hesla, takze nepojde do casti kodu pre username/password
       ?>
-      <button class="btn neomorf_1_inner m-2 p-5 logRegBtn" type="submit" form="updateUserForm" name="submitUserInfoImgChanges" id="submitUserInfoImgChanges">
+      <button class="btn btn-small m-2 p-5 logRegBtn" type="submit" form="updateUserForm" name="submitUserInfoImgChanges" id="submitUserInfoImgChanges">
         Odoslať údaje
       </button>
     </div>
   </div>
 
   <?php //Action musi byt nastavena na switch v admin.php => tu je to userDetails ?>
-  <form class="neomorf_1_outer d-flex justify-content-center" id="updateUserForm" action="admin.php?action=userDetails" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+  <form class=" d-flex justify-content-center" id="updateUserForm" action="admin.php?action=userDetails" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 
     <div class="d-flex flex-column justify-content-center align-items-center userFormInner">
       <h3>Zmena mena alebo hesla</h3>
@@ -105,7 +105,7 @@
       <div class="logRegBtns">
         <?php //toto odosle do adminu POST, takze kod moze pokracovat
         ?>
-        <button class="btn neomorf_1_inner m-2 p-5 logRegBtn" type="submit" name="submitChanges" id="submitUserChanges">Odoslať údaje</button>
+        <button class="btn btn-small m-2 p-5 logRegBtn" type="submit" name="submitChanges" id="submitUserChanges">Odoslať údaje</button>
       </div>
     </div>
   </form>
@@ -115,7 +115,7 @@
 <?php //DELETE ACCOUNT?>
 <form class="d-flex justify-content-center" action="admin.php?action=deleteUser" method="post">
   <div class="tooltip">
-    <button class="btn m-2 p-5 logRegBtn danger" type="submit" name="submitDeleteUser" id="submitDeleteUser" onclick="return confirm('Naozaj vymazať konto?\nTvoje konto bude vymazané ale všetky tvoje recepty zostanú dostupné pre ostatných užívateľov.')">Zmazať konto</button>
+    <button class="btn btn-small m-2 p-5 logRegBtn danger" type="submit" name="submitDeleteUser" id="submitDeleteUser" onclick="return confirm('Naozaj vymazať konto?\nTvoje konto bude vymazané ale všetky tvoje recepty zostanú dostupné pre ostatných užívateľov.')">Zmazať konto</button>
     <span class="tooltiptext">Vymaže užívateľské konto</span>
   </div>
 </form>

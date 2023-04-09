@@ -8,7 +8,10 @@
 //d($results,$articlesCount);
 if(!empty($results['categoryName'])){ ?>
   <h1> <?= $results['pageTitle'] . " " . $results['categoryName']?></h1>
-  <h2> <?=  ' Podkategórie ' ?></h2>
+  
+  <?php /*/ ?>
+  <h2> <?=  $results['pageSubHeading'] ?></h2>
+   <?php /*/ ?>
 <?php }else{ ?>
   <h2> <?= $results['pageTitle']?></h2>
   <h4>Počet zodpovedajúcich výsledkov : <?= $articlesCount ?> </h4>

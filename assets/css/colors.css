@@ -1,4 +1,5 @@
-:root {
+:root,
+:root.light {
   --light: #fb7f50;
   --dark: #484841;
   --complement: #22FCC1;
@@ -7,4 +8,15 @@
   --tooltip-color: #32322a;
   --article-color: rgb(128 60 178 / 32%);
 
+}
+
+
+:root.dark {
+  --light: rgb(229, 141, 108);
+  --dark: #3b3b1d;
+  --complement: #be37bc;
+  --card-color: #071135;
+  --danger-color: rgb(197, 154, 154);
+  --tooltip-color: #e5e525;
+  --article-color: rgba(152, 68, 212, 0.32);
 }

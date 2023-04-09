@@ -14,7 +14,7 @@ include "templates/include/header.php"; //SESSION START ?>
   //$insertedUser);
   //d($_GET['action']);
 ?>
-<form class=" neomorf_1_outer d-flex justify-content-center" accept-charset="utf-8" action="admin.php?action=register" method="post" enctype="multipart/form-data">
+<form class="d-flex justify-content-center" accept-charset="utf-8" action="admin.php?action=register" method="post" enctype="multipart/form-data">
 
   <?php //vyznam tohto? kvoli admin route?
   ?>
@@ -26,8 +26,8 @@ include "templates/include/header.php"; //SESSION START ?>
   <?php } ?>
   <?php /*/ ?>
 
-  <div class="  neomorf_1_inner  m-5 p-5 regForm">
-    <div class= "regForm d-flex flex-column justify-content-center align-items-center mb-3">
+  <div class="regForm">
+    <div class= "regForm d-flex flex-column justify-content-center  mb-3">
 
     <?php //If there is problem, error defined in admin function will be shown
      if (isset($results['errorMessage'])) { ?>
@@ -71,14 +71,17 @@ include "templates/include/header.php"; //SESSION START ?>
     </div>
 
     <div class="logRegBtns">
-      <button class="btn neomorf_1_inner disabled" type="submit" id="submitRegister"  name="register" disabled="true" >Registrácia</button>
+      <button class="btn btn-small disabled" type="submit" id="submitRegister"  name="register" disabled="true" >Registrácia</button>
 
     </div>
   </div>
 </form>
 
 <script src="././assets/js/registration.js?v=<?=  time(); ?>"></script>
+
+<?php /*/ ?>
 <script src="././assets/js/hideFooter.js?v=<?=  time(); ?>"></script>
+<?php /*/ ?>
 
 <?php include "templates/include/footer.php" ?>
 

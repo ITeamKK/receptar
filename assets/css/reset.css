@@ -71,6 +71,7 @@ button {
 
 /* I usually expand input and textarea to full-width */
 input[type="text"],
+[type="email"],
 textarea {
 /*   width: 100%;
  */}

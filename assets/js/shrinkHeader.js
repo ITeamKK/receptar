@@ -12,7 +12,7 @@ const screenWidth = 500
 function shrinkHeader (scrollPos) {
   console.log(lastKnownScrollPosition)
 
-  burgerMenu.style.position = 'relative'
+  //burgerMenu.style.position = 'relative'
 
   logo.classList.add('logo-scrolled')
   logo.src = '/assets/images/recepty_base.png'
@@ -24,7 +24,7 @@ window.addEventListener('scroll', function (e) {
   if ((Math.round(lastKnownScrollPosition) >= numberPixelsFromTop) && window.innerWidth < screenWidth){
     shrinkHeader(lastKnownScrollPosition)
   } else {
-    burgerMenu.style.position = 'absolute'
+   // burgerMenu.style.position = 'absolute'
 
     logo.classList.remove('logo-scrolled')
     logo.src = '/assets/images/logo_sk.png'

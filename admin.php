@@ -6,11 +6,11 @@ require("config.php");
 
 include 'kint.phar'; //Debugging
 // d($_SESSION); //ked sa toto povoli, tak to zacne blbnut a neda sa prihlasit - nemoze tu byt ani print ani echo ked pouzivame header()
-
+/*
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
+*/
 //if ther is no action set, like from correct login, action == empty and the next if wont do anything
 $action = isset($_GET['action']) ? $_GET['action'] : "";
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : "";

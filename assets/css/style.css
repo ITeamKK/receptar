@@ -36,6 +36,9 @@ header figure {
   /* text-align: left; */
   left: 1%;
   flex: 60%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
 }
 .logo {
   max-width: 250px;
@@ -431,6 +434,7 @@ form input:focus {
 
 input:valid,
 textarea:valid {
+  width: 100%;
 }
 
 /* ARROWS fontawesome*/
@@ -466,7 +470,7 @@ button {
   color: var(--light);
   transition: 0.3s;
   border-radius: 20px;
-  padding: 1.5rem;
+  padding: 0.5rem;
 }
 
 /* old-school "down" effect on clic + color tweak */
@@ -553,20 +557,21 @@ button {
   margin: 1%;
 }
 .loginContainer input {
-  border-radius: 50px;
+  /*border-radius: 50px;*/
 }
 .loginContainer textarea {
-  border-radius: 15px;
+  /*border-radius: 15px;*/
 }
 
 /* REGISTER BTN */
 .regForm,
 .loginForm {
   /* width: 55%; */
+  text-align:center;
 }
 .logRegBtns {
-  padding: 3%;
-  margin: 5%;
+ /* padding: 3%;
+  margin: 5%;*/
 }
 /* .logRegBtns button{
   border: 3px gray outset;
@@ -594,11 +599,12 @@ button {
 .contactForm * > textarea {
   font-size: x-large;
   height: inherit;
+  width:100%;
 }
 
 .disabled {
   cursor: default;
-  color: var(--complement);
+  color: var(--light);
   border-color: currentColor;
 }
 
@@ -695,7 +701,7 @@ tbody tr:hover {
 }
 
 .menu_header {
-  position: absolute;
+  /*position: absolute;*/
   top: 5px;
   right: 1%;
   display: flex;
@@ -994,6 +1000,10 @@ h4 {
   align-items: center;
 }
 
+.align-items-end {
+  align-items: flex-end;
+}
+
 .justify-content-between {
   justify-content: space-between;
 }
@@ -1068,8 +1078,8 @@ h4 {
   .burger {
     display: block;
     position: absolute;
-    /**/ top: 25px; 
-    right: 0px;
+    /**/ top: 20px; 
+    right: 10px;
     font-size: large;
   }
   .menu_header {
@@ -1160,4 +1170,8 @@ form > div {
 }
 .custom-file-input:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+
+.d-none{
+  display: none;
 }

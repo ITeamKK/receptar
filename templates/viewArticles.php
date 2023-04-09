@@ -3,22 +3,28 @@
 ?>
 <?php include "templates/include/searchBox.php" ?>
 
+<?php 
+//d($results['articles']);
+?>
+
 <?php //If not existing Category Name- may be were showing search results, wont display H1
 //d($results,$articlesCount);
 if (!empty($results['categoryName'])) { ?>
   <h1> <?=  $results['pageHeading'] . " " . $results['categoryName'] ?></h1>
+  <?php /*/ ?>
   <h2> <?=  $results['pageSubHeading'] ?></h2>
+    <?php /*/ ?>
 <?php } else { ?>
   <h2> <?=  $results['pageHeading'] ?></h2>
-  <h4>Počet zodpovedajúcich výsledkov : <?=  $articlesCount ?> </h4>
+  <h3>Počet výsledkov: <?=  $articlesCount ?> </h3>
 <?php } ?>
-
+<?php /*/ ?>
 <div>
   <i href="javascript:;" onclick="sortAscending('<?=  $results['articles'] ?>');" class="sortAsc fas fa-arrow-down  p-1"></i>
 
   <i class="sortDesc fas fa-arrow-up  p-1"></i>
 </div>
-
+  <?php /*/ ?>
 <section class="card-container">
   <?php
   // d($_SESSION);
@@ -53,7 +59,7 @@ if (!empty($results['categoryName'])) { ?>
             </h2>
           <?php } ?>
 
-          <p class="summary"><?=  htmlspecialchars($article->summary) ?></p>
+          <p class="summary"><?= $article->summary ?></p>
           <span class="pubDate"><?=  date('j F', $article->publicationDate) ?></span>
         </a>
         <?php
@@ -67,7 +73,7 @@ if (!empty($results['categoryName'])) { ?>
     }
   } else {
     ?>
-    <p> Nenasli sa ziadne recepty. </p>
+    <p> Nenašli sa žiadne recepty. </p>
   <?php } ?>
 
 </section>

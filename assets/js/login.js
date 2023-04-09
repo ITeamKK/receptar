@@ -58,5 +58,6 @@ function showText () {
 //called directly from HTML
 //appear form to reset password
 function showEmailForm () {
+  document.querySelector('#loginForm').classList.add('d-none');
   resendDiv.classList.remove('resendPass')
 }

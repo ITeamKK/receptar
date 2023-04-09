@@ -4,7 +4,7 @@
 
 
 include("globals.php"); //defined global variables
-ini_set( "display_errors", true ); //line causes error messages to be displayed in the browser,it should be set to false on a live site since it can be a security risk.
+//ini_set( "display_errors", true ); //line causes error messages to be displayed in the browser,it should be set to false on a live site since it can be a security risk.
 date_default_timezone_set( "Europe/Madrid" );  //we need to tell PHP our server’s timezone (otherwise PHP generates a warning message) http://www.php.net/manual/en/timezones.php
 
 // config db according to server
@@ -63,9 +63,9 @@ function handleException( $exception ) { //simple function to handle any PHP exc
 
 set_exception_handler( 'handleException' ); //calling the function when exception handling is needed
 //DISPLAY ERRORS https://www.php.net/manual/en/ini.list.php
- ini_set('display_errors', 1);
- ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 //ADDITIONAL
 define("TODAY",date('F j, Y'));

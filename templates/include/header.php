@@ -69,33 +69,33 @@ if (!isset($_SESSION)) //to no to run SESSION more than once. Its called also in
       <?php
       if (isset($_SESSION['username'])) {
       ?>
-        <div>
-          <a class=""href=" admin.php?action=userDetails"> <?= htmlspecialchars($_SESSION['username']) ?> <i class="fas fa-user"></i> </a>
-        </div>
-        <div><a class="" href="admin.php?action=logout"><i class="fas fa-sign-out-alt"></i> </a>
-        </div>
-      <?php } ?>
-  
-      <?php
-      // d(checkAdmin(),$_GET,$_SESSION);
-      if (isset($_SESSION['username']) && checkAdmin()) {
-        //if user is admin, it will be possible to changed categories
-      ?>
-       <div>  <a class="" href="admin.php?action=listCategories">Upraviť kategórie</a></div>
-      <?php /*/ ?>
-       <div> <a class="" href="admin.php?action=dbManagement">DB management</a></div>
+        <nav class="menu_header">
+          <a class="" href=" admin.php?action=userDetails"> <?= htmlspecialchars($_SESSION['username']) ?> <i class="fas fa-user"></i> </a>
+
+          <a class="" href="admin.php?action=logout"><i class="fas fa-sign-out-alt"></i> </a>
+
+        <?php } ?>
+
+        <?php
+        // d(checkAdmin(),$_GET,$_SESSION);
+        if (isset($_SESSION['username']) && checkAdmin()) {
+          //if user is admin, it will be possible to changed categories
+        ?>
+          <a class="" href="admin.php?action=listCategories">Upraviť kategórie</a>
+          <?php /*/ ?>
+       <a class="" href="admin.php?action=dbManagement">DB management</a>
        <?php /*/ ?>
-        <?php /*/ ?><p><?=  TODAY ?></p><?php /*/ ?>
-      <?php } ?>
+          <?php /*/ ?><p><?=  TODAY ?></p><?php /*/ ?>
+        <?php } ?>
 
-      <?php //FAVOURITES HEART ICON shown if logged in
-      if (isset($_SESSION['username'])) {
+        <?php //FAVOURITES HEART ICON shown if logged in
+        if (isset($_SESSION['username'])) {
 
-      ?>
-  
-        <div class="likeContainer">
-          <a class="  tooltip" href="admin.php?action=favourites">
-            Moje obľúbené recepty
+        ?>
+
+
+          <a class="likeContainer  tooltip" href="admin.php?action=favourites">
+            Moje obľúbené
             <i id="iconFavouriteHeader" class="<?php
                                                 //this code looks into db and when there are some favourites, it will be true
                                                 if (!empty(User::getByUsername($_SESSION['username'])->favouriteArticles)) {
@@ -106,38 +106,38 @@ if (!isset($_SESSION)) //to no to run SESSION more than once. Its called also in
                                                 ?> fa-heart p-1"></i>
             <div class="tooltiptext">Obľúbené recepty</div>
           </a>
-        </div>
 
-        <div>
+
           <a class="" href="admin.php?action=newArticle">
             Pridať recept
             <i class="fas fa-plus-square"></i>
           </a>
-        </div>
+          <a class="darkModeSwitch" id="darkModeSwitch"> <i class="fas fa-moon"></i></a>
 
+        </nav>
 
       <?php } else { ?>
         <nav class="menu_header">
           <a href="admin.php">Prihlásiť sa</a>
           <a href="admin.php?action=register">Registrovať sa</a>
-          <button class="darkModeSwitch" id="switch"> <i class="fas fa-moon"></i>
-            <span></span>
-            <span></span>
-          </button>
-
+          <a class="darkModeSwitch" id="darkModeSwitch"> <i class="fas fa-moon"></i></a>
         </nav>
-
-
-        <div class="burger" id="burgerMenu">
-          <i class="fas fa-bars"></i>
-        </div>
-
       <?php } ?>
+
+      <div class="burger" id="burgerMenu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+
     </div>
   </header>
 
   <!-- SHRINK HEADER JS -->
   <script src="./assets/js/shrinkHeader.js?v=<?= time(); ?>"></script>
+
+  <!-- DARK MODE SWITCH JS -->
+  <script src="./assets/js/darkModeSwitch.js?v=<?= time(); ?>"></script>
+
   <main>
 
     <?php
