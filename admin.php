@@ -522,12 +522,13 @@ function editArticle()
         if (isset($_POST['deleteImage']) && $_POST['deleteImage'] == "yes") {
             $article->deleteImages();
         }
-        if (isset($_FILES['image']))
+        if (isset($_FILES['image'])){
             $article->storeUploadedImage($_FILES['image']); //$_FILES -> superglobal array that contains all the information about the uploaded image file, "image" must be the same name as in editArticle input name for image.
-
+        }
         $article->update(); //update method of the class Article -> rewrites given data to the existing db data.
 
         header("Location:admin.php?status=changesSaved");
+        
     } elseif (isset($_POST['cancel'])) {
 
         // User has cancelled their edits: return to the article list

@@ -1,3 +1,6 @@
+TODO:
+pridavnaie fotiek v admine - nezobrazuje sa ake fotky su tam uz nahrane a ked nahras fotku v nespranvom formate da to skaredy error a neupozorni ta to ci sa ulozil zvysok alebo nie
+
 https://qpalma.myqnapcloud.com:8081
 https://qpalma.myqnapcloud.com:8081/phpMyAdmin/index.php?db=cms&table=users&target=sql.php
 
