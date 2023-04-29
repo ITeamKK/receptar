@@ -1,4 +1,4 @@
-<div id="searchBox" class="searchBox p-3">
+<div id="searchBox" class="searchBox">
 
   <form class="searchForm" action="index.php" method="GET">
     <input type="hidden" id="action" name="action" value="searchForArticle">
@@ -11,6 +11,6 @@
   <!--  <button type="button" class="close">x</button> -->
 </div>
 
-<div class=" p-3">
+<div class="">
   <p><a href="./?action=archive">Zobraziť všetky recepty (<?= $results['totalRows'] ?>)</a></p>
 </div>
