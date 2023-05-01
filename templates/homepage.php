@@ -1,6 +1,5 @@
 <?php include "templates/include/header.php"; //SESSION START ?>
 <?php include "templates/include/searchBox.php" ?>
-<?php include "templates/include/quoteBox.php" ?>
 
 <?php
 /*<h1><?=  htmlspecialchars($results['pageTitle']) ?></h1>*/
@@ -59,5 +58,5 @@
 
 </section>
 
-
+<?php include "templates/include/quoteBox.php" ?>
 <?php include "templates/include/footer.php" ?>

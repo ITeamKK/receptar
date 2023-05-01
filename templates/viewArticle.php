@@ -84,13 +84,7 @@
       <hr>
 
       <div class="d-flex justify-content-between align-items-end">
-            <?php
-            //HALF SIZED DESCRIPTION(summary in db)
-            ?>
-            <h4 class="p-3 text-left">Poznámka: </h4>
-            <div class="p-3 halfSize text-left article-description">
-                  <?= $results['article']->summary ?>
-            </div>
+        
 
             <?php
             //HALF SIZED IMAGE
@@ -107,6 +101,14 @@
 
       <div class="d-flex flex-column justify-content-between">
 
+      <?php
+            //HALF SIZED DESCRIPTION(summary in db)
+            ?>
+            <h4 class="p-3 text-left">Poznámka: </h4>
+            <div class=" text-left article-description">
+                  <?= $results['article']->summary ?>
+            </div>
+            <hr>
 
             <h4 class="text-left article-main-header">Ingrediencie : </h4>
             <div>
