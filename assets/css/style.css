@@ -199,6 +199,9 @@ hr {
 /* RECEPT CELY NA JEDNEJ STRANE */
 /* viewArticle */
 .article-description {
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 1%;
   /*background-color: var(--article-color);*/
 }
 .article-main-header {
@@ -1014,6 +1017,7 @@ h4 {
 
 .halfSize {
   width: 50%;
+  max-height:50%;
 }
 .fullSize {
   width: 100%;

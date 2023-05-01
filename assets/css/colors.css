@@ -1,5 +1,17 @@
 :root,
 :root.light {
+  --light: #4f4544;
+  --dark: #f7c7d0cf;
+  --complement: #22FCC1;
+  --card-color: #e27a7afa;
+  --danger-color: rgb(158, 12, 12);
+  --tooltip-color: #cfcf51;
+  --article-color: rgb(128 60 178 / 32%);
+
+}
+
+
+:root.dark {
   --light: #fb7f50;
   --dark: #484841;
   --complement: #22FCC1;
@@ -7,16 +19,4 @@
   --danger-color: rgb(158, 12, 12);
   --tooltip-color: #32322a;
   --article-color: rgb(128 60 178 / 32%);
-
-}
-
-
-:root.dark {
-  --light: rgb(229, 141, 108);
-  --dark: #3b3b1d;
-  --complement: #be37bc;
-  --card-color: #071135;
-  --danger-color: rgb(197, 154, 154);
-  --tooltip-color: #e5e525;
-  --article-color: rgba(152, 68, 212, 0.32);
 }

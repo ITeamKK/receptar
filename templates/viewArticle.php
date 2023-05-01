@@ -93,7 +93,7 @@
             if ($imagePath = $results['article']->getImagePath()) {
                   // d($imagePath);
             ?>
-                  <img class="pr-3 halfSize" src="<?= $imagePath ?>" alt="Article Image" />
+                  <img class="pl-3 halfSize" src="<?= $imagePath ?>" alt="Article Image" />
             <?php } ?>
       </div>
 
@@ -106,7 +106,7 @@
             ?>
             <h4 class="p-3 text-left">Poznámka: </h4>
             <div class=" text-left article-description">
-                  <?= $results['article']->summary ?>
+                <p>  <?= $results['article']->summary ?></p>
             </div>
             <hr>
 
@@ -121,8 +121,8 @@
             //MAIN BODY OF RECIPE
             ?>
             <h4 class="text-left article-main-header">Postup: </h4>
-            <div>
-                  <p class="text-left article-main"><?= $results['article']->content ?></p>
+            <div class="text-left article-main">
+                 <?= $results['article']->content ?>
             </div>
             <hr>
             <div>
